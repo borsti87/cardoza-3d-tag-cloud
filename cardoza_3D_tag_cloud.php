@@ -34,7 +34,7 @@ function widget_cardoza_3d_tagcloud($args){
 		foreach($tags_list as $tag){
 			$font_size = 40 - (($max_count - $tag->count)*2);
 			if($font_size<12) $font_size = 12;
-			echo '<li><a href="'.$_SERVER['PHP_SELF'].'?tag='.$tag->slug.'" style="font-size:'.$font_size.'px;">'.$tag->name.'</li>';
+			echo '<li><a href="'.$_SERVER['PHP_SELF'].'?tag='.$tag->slug.'" style="font-size:'.$font_size.'px;">'.$tag->name.'</a></li>';
 		}
 		echo '</ul></div>';
 	}
