@@ -134,7 +134,8 @@ function widget_cardoza_3d_tagcloud($args){
 	global $wpdb;
 	$tags_list = get_terms('post_tag', array(
 				'orderby' 		=> 'count',
-				'hide_empty' 	=> 0
+				'hide_empty' 	=> 0,
+				'order'			=> 'DESC'
 			));
 	if(sizeof($tags_list)!=0){
 		$max_count = 0;
