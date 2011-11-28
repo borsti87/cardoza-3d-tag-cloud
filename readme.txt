@@ -14,6 +14,18 @@ Cardoza 3D Tag Cloud allows you to display your site’s tags using jquery that ro
 
 It works just like a regular tags cloud, but is more visually exciting. Clicking the tags will take you to the appropriate page. 
 
+New Configuration options been added to the admin panel. Now the site admin can configure the following options.
+1. Title of the Tag Cloud.
+2. Number of tags to be displayed.
+3. Height and Width of the widget.
+4. Background Color.
+5. Text Color.
+6. Font.
+7. Font maximum size.
+8. Font minimum size.
+
+If you have any suggestions or feedback, please post it in the following link.
+
 For more visit: http://fingerfish.com/cardoza-3d-tagcloud/
 
 == Installation ==
@@ -30,6 +42,7 @@ Uninstalling is as simple as deactivating the plugin.
 == Screenshots ==
 
 1. screenshot-1.gif
+2. screenshot-2.gif
 
 == Frequently Asked Questions ==
 

@@ -1,18 +1,8 @@
-/* Set font and background for body*/  
-body{
-    font-family: Arial, "MS Trebuchet", sans-serif;
-}
-
 /* Styles the div wrapper
 the important part is the
 width and the height */
 #list{
-   
     /*Influences layout of list*/
-    height:275px;
-    width:275px;
-   
-   
     /* Keeps list inside of wrapper*/
     position:relative;
     margin:0 auto;
@@ -33,9 +23,9 @@ freely */
 #list a{
     position:absolute;
     text-decoration: none;
-    color:#003;
 }
 #list a:hover{
     color:#006;
+	padding:2px;
 	border:1px #003 solid;
 }
