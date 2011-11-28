@@ -128,6 +128,7 @@ function widget_cardoza_3d_tagcloud($args){
 	extract($args);
 	echo $before_widget;
 	echo $before_title;
+	if(empty($option_value['title'])) $option_value['title'] = "Tag Cloud";
 	echo $option_value['title'];
 	echo $after_title;
 	global $wpdb;
