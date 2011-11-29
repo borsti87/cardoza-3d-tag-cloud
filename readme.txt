@@ -10,7 +10,7 @@ Displays your post tags in 3D rotating animation.
 
 == Description ==
 
-Cardoza 3D Tag Cloud allows you to display your site’s tags using jquery that rotates the tags in 3D. 
+Cardoza 3D Tag Cloud allows you to display your site's tags using jquery that rotates the tags in 3D. 
 
 It works just like a regular tags cloud, but is more visually exciting. Clicking the tags will take you to the appropriate page. 
 
