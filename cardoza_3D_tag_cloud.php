@@ -37,10 +37,10 @@ function retrieve_options($opt_val){
 
 function cardoza_3d_tag_cloud_options(){
 	add_menu_page(
-		__('Cardoza Plugins'), 
+		__('3D Tag Cloud'), 
 		'3D Tag Cloud', 
 		'manage_options', 
-		'slug_for_cardoza_plugins', 
+		'slug_for_3d_tag_cloud', 
 		'cardoza_3D_tc_options_page',
 		plugin_dir_url(__FILE__).'images/Vinoj.jpg');
 }
