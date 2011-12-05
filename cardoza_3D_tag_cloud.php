@@ -36,7 +36,13 @@ function retrieve_options($opt_val){
 }
 
 function cardoza_3d_tag_cloud_options(){
-	add_theme_page("Cardoza 3D Tag Cloud Options", "Cardoza 3D Tag Cloud", "8", "tagcloauoptions", "cardoza_3D_tc_options_page");
+	add_menu_page(
+		__('Cardoza Plugins'), 
+		'3D Tag Cloud', 
+		'manage_options', 
+		'slug_for_cardoza_plugins', 
+		'cardoza_3D_tc_options_page',
+		plugin_dir_url(__FILE__).'images/Vinoj.jpg');
 }
 
 function cardoza_3D_tc_options_page(){
@@ -116,8 +122,9 @@ function cardoza_3D_tc_options_page(){
 		<tr><td width="150"><b>Minimum font size</b></td>
 		<td><input type="text" name="frm_min_font_size"  value="<?php echo $option_value['min_font_size'];?>"/></td></tr>
 		<tr><td width="150"></td><td>(Minimum size of the font for lowest tag count)</td></tr>
+		<tr height="60"><td></td><td><input type="submit" name="frm_submit" value="Update Options" style="background-color:#CCCCCC;font-weight:bold;"/></td>
 		</table>
-		<br /><input type="submit" name="frm_submit" value="Update Options"/>
+		
 		</form>
 	</div>
 <?php
