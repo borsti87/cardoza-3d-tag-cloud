@@ -10,9 +10,10 @@
    */
 
 //includes the jquery file
+wp_enqueue_script('jquery');
 wp_enqueue_script('mousewheel_handle', plugin_dir_url(__FILE__). 'ext/jquery.mousewheel.min.js');
 wp_enqueue_script('tagsphere_handle', plugin_dir_url(__FILE__). 'jquery.tagsphere.js');
-wp_enqueue_script('tagcloud_handle', plugin_dir_url(__FILE__). 'cardoza_3D_tag_cloud.js', array('jquery'));
+wp_enqueue_script('tagcloud_handle', plugin_dir_url(__FILE__). 'cardoza_3D_tag_cloud.js');
 //includes the css styles file
 wp_enqueue_style('my-style', plugin_dir_url(__FILE__). '3dcloud_style.css');
 
@@ -176,7 +177,7 @@ function widget_cardoza_3d_tagcloud($args){
 			if($i <= $option_value['no_of_tags']){
 				$font_size = $option_value['max_font_size'] - (($max_count - $tag->count)*2);
 				if($font_size < $option_value['min_font_size']) $font_size = $option_value['min_font_size'];
-					echo '<li><a class="point" id="tc_tags-cloud_'.$i.'" href="'.$_SERVER['PHP_SELF'].'?tag='.$tag->slug.'" style="
+					echo '<li><a href="'.$_SERVER['PHP_SELF'].'?tag='.$tag->slug.'" style="
 					color: #'.$option_value['txt_color'].';" rel="'.$i.'">'.$tag->name.'</a></li>';
 				$i++;
 				}
