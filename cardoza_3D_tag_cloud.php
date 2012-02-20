@@ -176,7 +176,7 @@ function widget_cardoza_3d_tagcloud($args){
 			if($i <= $option_value['no_of_tags']){
 				$font_size = $option_value['max_font_size'] - (($max_count - $tag->count)*2);
 				if($font_size < $option_value['min_font_size']) $font_size = $option_value['min_font_size'];
-					echo '<li><a href="'.$_SERVER['PHP_SELF'].'?tag='.$tag->slug.'" style="
+					echo '<li><a class="point" id="tc_tags-cloud_'.$i.'" href="'.$_SERVER['PHP_SELF'].'?tag='.$tag->slug.'" style="
 					color: #'.$option_value['txt_color'].';" rel="'.$i.'">'.$tag->name.'</a></li>';
 				$i++;
 				}
