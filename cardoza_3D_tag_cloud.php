@@ -11,7 +11,7 @@
 
 //includes the jquery file
 wp_enqueue_script('mousewheel_handle', plugin_dir_url(__FILE__). 'ext/jquery.mousewheel.min.js');
-wp_enqueue_script('tagsphere_handle', plugin_dir_url(__FILE__). 'jquerytagsphere.js');
+wp_enqueue_script('tagsphere_handle', plugin_dir_url(__FILE__). 'jquery.tagsphere.js');
 wp_enqueue_script('tagcloud_handle', plugin_dir_url(__FILE__). 'cardoza_3D_tag_cloud.js', array('jquery'));
 //includes the css styles file
 wp_enqueue_style('my-style', plugin_dir_url(__FILE__). '3dcloud_style.css');
