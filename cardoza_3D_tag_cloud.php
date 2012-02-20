@@ -3,17 +3,14 @@
    Plugin Name: Cardoza 3D tag cloud
    Plugin URI: http://fingerfish.com/cardoza-3d-tagcloud/
    Description: Cardoza 3D tag cloud displays your tags in 3D by placing them on a rotating text.
-   Version: 1.2
+   Version: 1.1
    Author: Vinoj Cardoza
    Author URI: http://fingerfish.com/about-me/
    License: GPL2
    */
 
 //includes the jquery file
-wp_enqueue_script('jquery');
-wp_enqueue_script('mousewheel_handle', plugin_dir_url(__FILE__). 'ext/jquery.mousewheel.min.js');
-wp_enqueue_script('tagsphere_handle', plugin_dir_url(__FILE__). 'jquery.tagsphere.js');
-wp_enqueue_script('tagcloud_handle', plugin_dir_url(__FILE__). 'cardoza_3D_tag_cloud.js');
+wp_enqueue_script('tagcloud_handle', plugin_dir_url(__FILE__). 'cardoza_3D_tag_cloud.js', array('jquery'));
 //includes the css styles file
 wp_enqueue_style('my-style', plugin_dir_url(__FILE__). '3dcloud_style.css');
 
@@ -39,13 +36,7 @@ function retrieve_options($opt_val){
 }
 
 function cardoza_3d_tag_cloud_options(){
-	add_menu_page(
-		__('3D Tag Cloud'), 
-		'3D Tag Cloud', 
-		'manage_options', 
-		'slug_for_3d_tag_cloud', 
-		'cardoza_3D_tc_options_page',
-		plugin_dir_url(__FILE__).'images/Vinoj.jpg');
+	add_theme_page("Cardoza 3D Tag Cloud Options", "Cardoza 3D Tag Cloud", "8", "tagcloauoptions", "cardoza_3D_tc_options_page");
 }
 
 function cardoza_3D_tc_options_page(){
@@ -125,9 +116,8 @@ function cardoza_3D_tc_options_page(){
 		<tr><td width="150"><b>Minimum font size</b></td>
 		<td><input type="text" name="frm_min_font_size"  value="<?php echo $option_value['min_font_size'];?>"/></td></tr>
 		<tr><td width="150"></td><td>(Minimum size of the font for lowest tag count)</td></tr>
-		<tr height="60"><td></td><td><input type="submit" name="frm_submit" value="Update Options" style="background-color:#CCCCCC;font-weight:bold;"/></td>
 		</table>
-		
+		<br /><input type="submit" name="frm_submit" value="Update Options"/>
 		</form>
 	</div>
 <?php
@@ -138,19 +128,18 @@ function widget_cardoza_3d_tagcloud($args){
 	extract($args);
 	echo $before_widget;
 	echo $before_title;
-	if(empty($option_value['title'])) $option_value['title'] = "Tag Cloud";
 	echo $option_value['title'];
 	echo $after_title;
 	global $wpdb;
 	$tags_list = get_terms('post_tag', array(
 				'orderby' 		=> 'count',
-				'hide_empty' 	=> 0,
-				'order'			=> 'DESC'
+				'hide_empty' 	=> 0
 			));
 	if(sizeof($tags_list)!=0){
 		$max_count = 0;
 		foreach($tags_list as $tag) if($tag->count > $max_count) $max_count = $tag->count;?>
-		<div id="tags-cloud" style="
+		<div id="list">
+		<ul style="
 		font-family: <?php if(!empty($option_value['font_name'])) echo $option_value['font_name'];
 			else echo "Calibri";?>;
 		height:
@@ -166,7 +155,6 @@ function widget_cardoza_3d_tagcloud($args){
 		background-color: #<?php if(!empty($option_value['bg_color'])) echo $option_value['bg_color'];
 			else echo "FFF";?>;
 		">
-		<ul>
 		<?php 
 		if(empty($option_value['no_of_tags'])) $option_value['no_of_tags'] = 15;
 		if(empty($option_value['txt_color'])) $option_value['txt_color'] = "000";
@@ -177,8 +165,8 @@ function widget_cardoza_3d_tagcloud($args){
 			if($i <= $option_value['no_of_tags']){
 				$font_size = $option_value['max_font_size'] - (($max_count - $tag->count)*2);
 				if($font_size < $option_value['min_font_size']) $font_size = $option_value['min_font_size'];
-					echo '<li><a href="'.$_SERVER['PHP_SELF'].'?tag='.$tag->slug.'" style="
-					color: #'.$option_value['txt_color'].';" rel="'.$i.'">'.$tag->name.'</a></li>';
+					echo '<li><a href="'.$_SERVER['PHP_SELF'].'?tag='.$tag->slug.'" style="font-size:'.$font_size.'px;
+					color: #'.$option_value['txt_color'].';">'.$tag->name.'</a></li>';
 				$i++;
 				}
 			}
