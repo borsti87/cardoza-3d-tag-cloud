@@ -24,6 +24,9 @@ New Configuration options been added to the admin panel. Now the site admin can 
 7. Font maximum size.
 8. Font minimum size.
 
+= Version 1.2 =
+The style is completely changed to display the tags in sphere structure.
+
 If you have any suggestions or feedback, please post it in the following link.
 
 For more visit: http://fingerfish.com/cardoza-3d-tagcloud/
@@ -47,4 +50,9 @@ Uninstalling is as simple as deactivating the plugin.
 == Frequently Asked Questions ==
 
 None yet, if you have one post it at http://fingerfish.com/cardoza-3d-tagcloud/
+
+== Changelog ==
+
+= Version 1.2 =
+The style is completely changed to display the tags in sphere structure.
 
