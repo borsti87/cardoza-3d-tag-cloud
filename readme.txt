@@ -1,6 +1,7 @@
 === Cardoza 3D Tag Cloud ===
-Contributors: Vinoj Cardoza
-Tags: tag, tagcloud, cloud, 3D tagcloud, rottating tags
+Contributors: vinoj.cardoza
+Donate link: http://www.fingerfish.com/
+Tags: tag, tagcloud, cloud, 3D tagcloud
 Requires at least: 3.0
 Tested up to: 3.2
 Stable tag: trunk
@@ -10,7 +11,7 @@ Displays your post tags in 3D rotating animation.
 
 == Description ==
 
-Cardoza 3D Tag Cloud allows you to display your site’s tags using jquery that rotates the tags in 3D. 
+Cardoza 3D Tag Cloud allows you to display your siteï¿½s tags using jquery that rotates the tags in 3D. 
 
 It works just like a regular tags cloud, but is more visually exciting. Clicking the tags will take you to the appropriate page. 
 
