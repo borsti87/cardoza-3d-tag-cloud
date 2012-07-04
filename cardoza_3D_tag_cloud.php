@@ -1,9 +1,9 @@
 <?php
    /*
-   Plugin Name: Cardoza 3D tag cloud
+   Plugin Name: 3D tag cloud
    Plugin URI: http://fingerfish.com/cardoza-3d-tagcloud/
-   Description: Cardoza 3D tag cloud displays your tags in 3D by placing them on a rotating text.
-   Version: 1.2
+   Description: 3D tag cloud displays your tags in 3D by placing them on a rotating text.
+   Version: 1.3
    Author: Vinoj Cardoza
    Author URI: http://fingerfish.com/about-me/
    License: GPL2
@@ -76,7 +76,7 @@ function cardoza_3D_tc_options_page(){
 	$option_value = retrieve_options($opt_val);
 ?>
 	<div class="wrap">
-		<h2><?php _e("Cardoza 3D Tag Cloud Options", "c3dtc_tans_domain");?></h2><br />
+		<h2><?php _e("3D Tag Cloud Options", "c3dtc_tans_domain");?></h2><br />
 		<!-- Administration panel form -->
 		<form method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
 		<h3>General Settings</h3>
@@ -94,8 +94,8 @@ function cardoza_3D_tc_options_page(){
         <td><input type="text" name="frm_height" value="<?php echo $option_value['height'];?>"/>px</td></tr>
 		<tr><td width="150"></td><td>(Height of the tag cloud in pixels)</td></tr>
         </table><br />
+        <h3>Color Settings (Hex value)</h3>
 		<table>
-		<h3>Color Settings (Hex value)</h3>
 		<tr><td width="150"><b>Background Color:</b></td>
 		<td>#<input type="text" name="frm_bg_color"  value="<?php echo $option_value['bg_color'];?>"/></td></tr>
 		<tr><td width="150"></td><td>(Specify the background color)</td></tr>
@@ -183,7 +183,7 @@ function widget_cardoza_3d_tagcloud($args){
 }
 
 function cardoza_3d_tagcloud_init(){
-	register_sidebar_widget(__('Cardoza\'s 3D Tag Cloud'), 'widget_cardoza_3d_tagcloud');
+	register_sidebar_widget(__('3D Tag Cloud'), 'widget_cardoza_3d_tagcloud');
 }
 
 

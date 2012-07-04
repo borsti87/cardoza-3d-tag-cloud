@@ -1,4 +1,4 @@
-=== Cardoza 3D Tag Cloud ===
+=== 3D Tag Cloud ===
 Contributors: vinoj.cardoza
 Donate link: http://www.fingerfish.com/
 Tags: tag, tagcloud, cloud, 3D tagcloud
@@ -11,7 +11,7 @@ Displays your post tags in 3D rotating animation.
 
 == Description ==
 
-Cardoza 3D Tag Cloud allows you to display your site�s tags using jquery that rotates the tags in 3D. 
+3D Tag Cloud allows you to display your site's tags using jquery that rotates the tags in 3D. 
 
 It works just like a regular tags cloud, but is more visually exciting. Clicking the tags will take you to the appropriate page. 
 
@@ -34,7 +34,7 @@ For more visit: http://fingerfish.com/cardoza-3d-tagcloud/
 1. Download the plugin.
 2. Upload to your blog (/wp-content/plugins/).
 3. Activate it.
-4. Then go to widget and drag and drop Cardoza's 3d Tag Cloud in the area you want to display the plugin.
+4. Then go to widget and drag and drop 3d Tag Cloud in the area you want to display the plugin.
 
 You're done!
 
@@ -48,4 +48,3 @@ Uninstalling is as simple as deactivating the plugin.
 == Frequently Asked Questions ==
 
 None yet, if you have one post it at http://fingerfish.com/cardoza-3d-tagcloud/
-
