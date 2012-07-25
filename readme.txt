@@ -16,6 +16,7 @@ Displays your post tags in 3D rotating animation.
 It works just like a regular tags cloud, but is more visually exciting. Clicking the tags will take you to the appropriate page. 
 
 New Configuration options been added to the admin panel. Now the site admin can configure the following options.
+
 1. Title of the Tag Cloud.
 2. Number of tags to be displayed.
 3. Height and Width of the widget.
