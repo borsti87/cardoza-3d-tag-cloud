@@ -36,8 +36,6 @@ For more visit: http://fingerfish.com/cardoza-3d-tagcloud/
 
 = Translated languages =
 
-Link for translation - http://plugins.trac.wordpress.org/browser/cardoza-3d-tag-cloud/i18n
-
 * French
 * Spanish
 
