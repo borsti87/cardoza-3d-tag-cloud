@@ -27,7 +27,18 @@ New Configuration options been added to the admin panel. Now the site admin can 
 
 If you have any suggestions or feedback, please post it in the following link.
 
+= Translation =
+
+Translation is enabled for this plugin. If someone interested in translating this plugin please visit the following link and post in the comments section with your contact email. Thanks.
+
 For more visit: http://fingerfish.com/cardoza-3d-tagcloud/
+
+= Translated languages =
+
+Link for translation - http://plugins.trac.wordpress.org/browser/cardoza-3d-tag-cloud/i18n
+
+* French
+* Spanish
 
 == Installation ==
 
@@ -48,3 +59,8 @@ Uninstalling is as simple as deactivating the plugin.
 == Frequently Asked Questions ==
 
 None yet, if you have one post it at http://fingerfish.com/cardoza-3d-tagcloud/
+
+== Changelog ==
+= Version 1.4 =
+* Translation enbaled.
+* Icon replaced.

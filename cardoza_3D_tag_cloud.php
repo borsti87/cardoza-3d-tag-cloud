@@ -3,7 +3,7 @@
    Plugin Name: 3D tag cloud
    Plugin URI: http://fingerfish.com/cardoza-3d-tagcloud/
    Description: 3D tag cloud displays your tags in 3D by placing them on a rotating text.
-   Version: 1.3
+   Version: 1.4
    Author: Vinoj Cardoza
    Author URI: http://fingerfish.com/about-me/
    License: GPL2
@@ -42,7 +42,7 @@ function cardoza_3d_tag_cloud_options(){
 		'manage_options', 
 		'slug_for_c3dtc', 
 		'cardoza_3D_tc_options_page',
-		plugin_dir_url(__FILE__).'images/Vinoj.jpg');
+		plugin_dir_url(__FILE__).'images/tag-icon.png');
 }
 
 function cardoza_3D_tc_options_page(){
@@ -70,43 +70,37 @@ function cardoza_3D_tc_options_page(){
 		if(!empty($_POST['frm_max_font_size'])) update_option($c_3d_tag_options['c3d_max_font_size'], $_POST['frm_max_font_size']);
 		if(!empty($_POST['frm_min_font_size'])) update_option($c_3d_tag_options['c3d_min_font_size'], $_POST['frm_min_font_size']);
 ?>
-<div id="message" class="updated fade"><p><strong><?php _e('Options saved.', 'c3dtc_tans_domain' ); ?></strong></p></div>
+<div id="message" class="updated fade"><p><strong><?php _e('Options saved.', 'cardozatagcloud' ); ?></strong></p></div>
 <?php	
 	}
 	$option_value = retrieve_options($opt_val);
 ?>
 	<div class="wrap">
-		<h2><?php _e("3D Tag Cloud Options", "c3dtc_tans_domain");?></h2><br />
+		<h2><?php _e("3D Tag Cloud Options", "cardozatagcloud");?></h2><br />
 		<!-- Administration panel form -->
 		<form method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
-		<h3>General Settings</h3>
+		<h3><?php _e('General Settings','cardozatagcloud');?></h3>
 		<table>
-        <tr><td width="150"><b>Title:</b></td>
+        <tr><td width="200"><b><?php _e('Widget Title','cardozatagcloud');?>:</b></td>
         <td><input type="text" name="frm_title" size="50" value="<?php echo $option_value['title'];?>"/></td></tr>
-        <tr><td width="150"></td><td>(Plugin title to be displayed)</td></tr>
-		<tr><td width="150"><b>No of tags:</b></td>
+		<tr><td width="150"><b><?php _e('Number of tags','cardozatagcloud');?>:</b></td>
         <td><input type="text" name="frm_noof_tags" value="<?php echo $option_value['no_of_tags'];?>"/></td></tr>
-		<tr><td width="150"></td><td>(Number of tags to be displayed)</td></tr>
-		<tr><td width="150"><b>Width:</b></td>
+		<tr><td width="150"><b><?php _e('Width','cardozatagcloud');?>:</b></td>
         <td><input type="text" name="frm_width" value="<?php echo $option_value['width'];?>"/>px</td></tr>
-		<tr><td width="150"></td><td>(Width of the tag cloud in pixels)</td></tr>
-		<tr><td width="150"><b>Height:</b></td>
+		<tr><td width="150"><b><?php _e('Height','cardozatagcloud');?>:</b></td>
         <td><input type="text" name="frm_height" value="<?php echo $option_value['height'];?>"/>px</td></tr>
-		<tr><td width="150"></td><td>(Height of the tag cloud in pixels)</td></tr>
         </table><br />
-        <h3>Color Settings (Hex value)</h3>
+        <h3><?php _e('Color Settings (Hex value)','cardozatagcloud');?></h3>
 		<table>
-		<tr><td width="150"><b>Background Color:</b></td>
+		<tr><td width="200"><b><?php _e('Background Color','cardozatagcloud');?>:</b></td>
 		<td>#<input type="text" name="frm_bg_color"  value="<?php echo $option_value['bg_color'];?>"/></td></tr>
-		<tr><td width="150"></td><td>(Specify the background color)</td></tr>
-		<tr><td width="150"><b>Text Color:</b></td>
+		<tr><td width="150"><b><?php _e('Text Color','cardozatagcloud');?>:</b></td>
 		<td>#<input type="text" name="frm_txt_color"  value="<?php echo $option_value['txt_color'];?>"/></td></tr>
-		<tr><td width="150"></td><td>(Specify the background color)</td></tr>
 		</table><br />
-		<h3>Font Settings</h3>
+		<h3><?php _e('Font Settings','cardozatagcloud');?></h3>
 		<table>
-		<tr><td width="150"><b>Select the font:</b></td>
-		<td><select name="frm_font_name">
+		<tr><td width="200"><b><?php _e('Select the font','cardozatagcloud');?>:</b></td>
+		<td><select style="margin:0" name="frm_font_name">
 		<option value="Arial" <?php if($option_value['font_name'] == "Arial") echo "selected='selected'";?>>Arial</option>
 		<option value="Calibri" <?php if($option_value['font_name'] == "Calibri") echo "selected='selected'";?>>Calibri</option>
 		<option value="Helvetica" <?php if($option_value['font_name'] == "Helvetica") echo "selected='selected'";?>>Helvetica</option>
@@ -115,15 +109,12 @@ function cardoza_3D_tc_options_page(){
 		<option value="Times New Roman" <?php if($option_value['font_name'] == "Times New Roman") echo "selected='selected'";?>>Times New Roman</option>
 		<option value="Verdana" <?php if($option_value['font_name'] == "Verdana") echo "selected='selected'";?>>Verdana</option>
 		</select></td></tr>
-		<tr><td width="150"></td><td>(Select the font from the above list)</td></tr>
-		<tr><td width="150"><b>Maximum font size</b></td>
+		<tr><td width="150"><b><?php _e('Maximum font size','cardozatagcloud');?></b></td>
 		<td><input type="text" name="frm_max_font_size"  value="<?php echo $option_value['max_font_size'];?>"/></td></tr>
-		<tr><td width="150"></td><td>(Maximum size of the font for highest tag count)</td></tr>
-		<tr><td width="150"><b>Minimum font size</b></td>
+		<tr><td width="150"><b><?php _e('Minimum font size','cardozatagcloud');?></b></td>
 		<td><input type="text" name="frm_min_font_size"  value="<?php echo $option_value['min_font_size'];?>"/></td></tr>
-		<tr><td width="150"></td><td>(Minimum size of the font for lowest tag count)</td></tr>
+		<tr height="50"><td></td><td><input type="submit" name="frm_submit" value="Update Options"/></td></tr>
 		</table>
-		<br /><input type="submit" name="frm_submit" value="Update Options"/>
 		</form>
 	</div>
 <?php
@@ -183,6 +174,7 @@ function widget_cardoza_3d_tagcloud($args){
 }
 
 function cardoza_3d_tagcloud_init(){
+	load_plugin_textdomain('cardozatagcloud', false, dirname( plugin_basename(__FILE__)).'/languages');
 	register_sidebar_widget(__('3D Tag Cloud'), 'widget_cardoza_3d_tagcloud');
 }
 
