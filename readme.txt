@@ -13,7 +13,7 @@ Displays your post tags in 3D rotating animation.
 
 3D Tag Cloud allows you to display your site's tags using jquery that rotates the tags in 3D. 
 
-It works just like a regular tags cloud, but is more visually exciting. Clicking the tags will take you to the appropriate page. 
+It works just like a regular tags cloud, but is more visually exciting. Clicking the tags will take you to the appropriate page.  Might not work with less than IE9.
 
 New Configuration options been added to the admin panel. Now the site admin can configure the following options.
 
@@ -60,6 +60,11 @@ Uninstalling is as simple as deactivating the plugin.
 None yet, if you have one post it at http://fingerfish.com/cardoza-3d-tagcloud/
 
 == Changelog ==
+
+= Version 1.5 =
+* Tag style changed to sphere from flowing style.
+* Portuguese (Brazilian) translation added (Translated by Valdir Trombini).
+
 = Version 1.4 =
 * Translation enbaled.
 * Icon replaced.

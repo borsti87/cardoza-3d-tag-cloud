@@ -3,13 +3,14 @@
    Plugin Name: 3D tag cloud
    Plugin URI: http://fingerfish.com/cardoza-3d-tagcloud/
    Description: 3D tag cloud displays your tags in 3D by placing them on a rotating text.
-   Version: 1.4
+   Version: 1.5
    Author: Vinoj Cardoza
    Author URI: http://fingerfish.com/about-me/
    License: GPL2
    */
 
 //includes the jquery file
+wp_enqueue_script('tag_handle', plugin_dir_url(__FILE__). 'jquery.tagcanvas.min.js', array('jquery'));
 wp_enqueue_script('tagcloud_handle', plugin_dir_url(__FILE__). 'cardoza_3D_tag_cloud.js', array('jquery'));
 //includes the css styles file
 wp_enqueue_style('my-style', plugin_dir_url(__FILE__). '3dcloud_style.css');
@@ -134,8 +135,18 @@ function widget_cardoza_3d_tagcloud($args){
 			));
 	if(sizeof($tags_list)!=0){
 		$max_count = 0;
+                if(!empty($option_value['height'])) $canvas_height = $option_value['height'];
+                else $canvas_height = "250";
+                if(!empty($option_value['width'])) $canvas_width = $option_value['width'];
+		else $canvas_width = "250";
 		foreach($tags_list as $tag) if($tag->count > $max_count) $max_count = $tag->count;?>
-		<div id="list">
+		<div id="myCanvasContainer">
+                  <canvas width="<?php echo $canvas_width;?>" height="<?php echo $canvas_height;?>" id="myCanvas">
+                    <p>Anything in here will be replaced on browsers that support the canvas element</p>
+                  </canvas>
+                </div>
+                <div id="tags">
+                
 		<ul style="
 		font-family: <?php if(!empty($option_value['font_name'])) echo $option_value['font_name'];
 			else echo "Calibri";?>;
