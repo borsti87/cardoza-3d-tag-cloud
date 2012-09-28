@@ -37,6 +37,8 @@ For more visit: http://fingerfish.com/cardoza-3d-tagcloud/
 = Translated languages =
 
 * French
+* German
+* Portuguese - Brazilian (Translated by Valdir Trombini).
 * Spanish
 
 == Installation ==
@@ -60,6 +62,10 @@ Uninstalling is as simple as deactivating the plugin.
 None yet, if you have one post it at http://fingerfish.com/cardoza-3d-tagcloud/
 
 == Changelog ==
+
+= Version 1.5 =
+* Font size enabled in the tag cloud.
+* German translation added.
 
 = Version 1.5 =
 * Tag style changed to sphere from flowing style.
