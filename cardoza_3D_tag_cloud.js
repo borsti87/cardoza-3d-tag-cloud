@@ -1,5 +1,6 @@
-jQuery(document).ready(function() {
-    if(!jQuery('#myCanvas').tagcanvas({
+$j = jQuery.noConflict();
+$j(document).ready(function() {
+    if(!$j('#myCanvas').tagcanvas({
         textColour: '#333333',
         outlineColour: '#000000',
         reverse: true,
@@ -9,6 +10,7 @@ jQuery(document).ready(function() {
         maxSpeed: 0.05
     },'tags')) {
         // something went wrong, hide the canvas container
-        $('#myCanvasContainer').hide();
+        $j('#myCanvasContainer').hide();
     }
 });
+

@@ -63,7 +63,10 @@ None yet, if you have one post it at http://fingerfish.com/cardoza-3d-tagcloud/
 
 == Changelog ==
 
-= Version 1.5 =
+= Version 1.7 =
+* Jquery conflict bug fixed (Fixed by Muzammil Hussain).
+
+= Version 1.6 =
 * Font size enabled in the tag cloud.
 * German translation added.
 
