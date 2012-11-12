@@ -37,7 +37,7 @@ For more visit: http://fingerfish.com/cardoza-3d-tagcloud/
 = Translated languages =
 
 * French
-* German
+* German (Translated by Simon Lang)
 * Portuguese - Brazilian (Translated by Valdir Trombini).
 * Spanish
 
@@ -62,6 +62,9 @@ Uninstalling is as simple as deactivating the plugin.
 None yet, if you have one post it at http://fingerfish.com/cardoza-3d-tagcloud/
 
 == Changelog ==
+
+= Version 1.8 =
+* German translation improved (Translated by Simon Lang).
 
 = Version 1.7 =
 * Jquery conflict bug fixed (Fixed by Muzammil Hussain).

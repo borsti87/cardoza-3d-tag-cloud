@@ -2,7 +2,7 @@ $j = jQuery.noConflict();
 $j(document).ready(function() {
     if(!$j('#myCanvas').tagcanvas({
         textColour: '#333333',
-        outlineColour: '#000000',
+        outlineColour: '#FFFFFF',
         reverse: true,
         depth: 0.8,
         textFont: null,

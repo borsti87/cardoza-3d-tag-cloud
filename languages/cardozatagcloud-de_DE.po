@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cardozatagcloud\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-28 10:26-0000\n"
-"PO-Revision-Date: 2012-09-28 10:30-0000\n"
+"POT-Creation-Date: 2012-11-12 11:35-0000\n"
+"PO-Revision-Date: 2012-11-12 11:35-0000\n"
 "Last-Translator: Vinoj Cardoza <vinoj.cardoza@hotmail.com>\n"
 "Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -22,15 +22,15 @@ msgstr "3D Tag Cloud"
 
 #: ../cardoza_3D_tag_cloud.php:74
 msgid "Options saved."
-msgstr "Optionen gespeichert."
+msgstr "Einstellungen gespeichert"
 
 #: ../cardoza_3D_tag_cloud.php:80
 msgid "3D Tag Cloud Options"
-msgstr "3D Tag Cloud Optionen"
+msgstr "3D Tag Cloud Einstellungen"
 
 #: ../cardoza_3D_tag_cloud.php:83
 msgid "General Settings"
-msgstr "General Settings"
+msgstr "Allgemeine Einstellungen"
 
 #: ../cardoza_3D_tag_cloud.php:85
 msgid "Widget Title"
@@ -50,7 +50,7 @@ msgstr "Höhe"
 
 #: ../cardoza_3D_tag_cloud.php:94
 msgid "Color Settings (Hex value)"
-msgstr "Color Settings (Hex-Wert)"
+msgstr "Farbeinstellungen ( Hex-Wert)"
 
 #: ../cardoza_3D_tag_cloud.php:96
 msgid "Background Color"
@@ -62,7 +62,7 @@ msgstr "Textfarbe"
 
 #: ../cardoza_3D_tag_cloud.php:101
 msgid "Font Settings"
-msgstr "Font Settings"
+msgstr "Schrifteinstellungen"
 
 #: ../cardoza_3D_tag_cloud.php:103
 msgid "Select the font"
