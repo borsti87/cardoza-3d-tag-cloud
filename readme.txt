@@ -3,7 +3,7 @@ Contributors: vinoj.cardoza
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=vinoj%2ecardoza%40gmail%2ecom&currency_code=GBP&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: tag, tagcloud, cloud, 3D tagcloud
 Requires at least: 3.0
-Tested up to: 3.2
+Tested up to: 3.5
 Stable tag: trunk
 License: GPLv2 or later
 
