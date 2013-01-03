@@ -3,7 +3,7 @@
    Plugin Name: 3D tag cloud
    Plugin URI: http://fingerfish.com/cardoza-3d-tagcloud/
    Description: 3D tag cloud displays your tags in 3D by placing them on a rotating text.
-   Version: 1.9
+   Version: 2.0
    Author: Vinoj Cardoza
    Author URI: http://fingerfish.com/about-me/
    License: GPL2
@@ -40,6 +40,32 @@ function retrieve_options(){
 			'min_font_size' => stripslashes(get_option('c3dtc_min_font_size'))
 	); 
 	return $opt_val;
+}
+
+add_action('wp_head','tagcloud_js_init');
+
+function tagcloud_js_init(){
+	$option_value = retrieve_options(); 
+	if(!empty($option_value['txt_color'])) $canvas_txtcolor = $option_value['txt_color'];
+	else $canvas_txtcolor = "333333";
+	?>
+	<script type="text/javascript">
+	$j = jQuery.noConflict();
+$j(document).ready(function() {
+    if(!$j('#myCanvas').tagcanvas({
+    	textColour: '#<?php echo $canvas_txtcolor;?>',
+        outlineColour: '#FFFFFF',
+        reverse: true,
+        depth: 0.8,
+        textFont: null,
+        weight: true,
+        maxSpeed: 0.05
+    },'tags')) {
+        $j('#myCanvasContainer').hide();
+    }
+});
+</script>
+	<?php
 }
 
 function cardoza_3d_tag_cloud_options(){
@@ -141,17 +167,21 @@ function widget_cardoza_3d_tagcloud($args){
 			));
 	if(sizeof($tags_list)!=0){
 		$max_count = 0;
-                if(!empty($option_value['height'])) $canvas_height = $option_value['height'];
-                else $canvas_height = "250";
-                if(!empty($option_value['width'])) $canvas_width = $option_value['width'];
+        if(!empty($option_value['height'])) $canvas_height = $option_value['height'];
+        else $canvas_height = "250";
+        if(!empty($option_value['width'])) $canvas_width = $option_value['width'];
 		else $canvas_width = "250";
+		if(!empty($option_value['bg_color'])) $canvas_bgcolor = $option_value['bg_color'];
+		else $canvas_bgcolor = "FFFFFF";
+		
+		
 		foreach($tags_list as $tag) if($tag->count > $max_count) $max_count = $tag->count;?>
-		<div id="myCanvasContainer">
-                  <canvas width="<?php echo $canvas_width;?>" height="<?php echo $canvas_height;?>" id="myCanvas">
-                    <p>Anything in here will be replaced on browsers that support the canvas element</p>
-                  </canvas>
-                </div>
-                <div id="tags">
+		<div id="myCanvasContainer" style="background-color:#<?php echo $canvas_bgcolor;?>;">
+			<canvas width="<?php echo $canvas_width;?>" height="<?php echo $canvas_height;?>" id="myCanvas" >
+				<p>Anything in here will be replaced on browsers that support the canvas element</p>
+			</canvas>
+        </div>
+        <div id="tags">
                 
 		<ul style="
 		font-family: <?php if(!empty($option_value['font_name'])) echo $option_value['font_name'];
@@ -166,12 +196,9 @@ function widget_cardoza_3d_tagcloud($args){
 			if(!empty($option_value['width'])) echo $option_value['width'];
 			else echo "250";
 		?>px;
-		background-color: #<?php if(!empty($option_value['bg_color'])) echo $option_value['bg_color'];
-			else echo "FFF";?>;
 		">
 		<?php 
 		if(empty($option_value['no_of_tags'])) $option_value['no_of_tags'] = 15;
-		if(empty($option_value['txt_color'])) $option_value['txt_color'] = "000";
 		if(empty($option_value['max_font_size'])) $option_value['max_font_size'] = 40;
 		if(empty($option_value['min_font_size'])) $option_value['max_font_size'] = 3;
 		$i=1;
@@ -180,7 +207,7 @@ function widget_cardoza_3d_tagcloud($args){
 				$font_size = $option_value['max_font_size'] - (($max_count - $tag->count)*2);
 				if($font_size < $option_value['min_font_size']) $font_size = $option_value['min_font_size'];
 					echo '<li><a href="'.$_SERVER['PHP_SELF'].'?tag='.$tag->slug.'" 
-                                                    style="font-size:'.$font_size.'px;color: #'.$option_value['txt_color'].';">'
+                                                    style="font-size:'.$font_size.'px;color:">'
                                                     .$tag->name.'</a></li>';
 				$i++;
 				}

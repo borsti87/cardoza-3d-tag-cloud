@@ -3,7 +3,7 @@ Contributors: vinoj.cardoza
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=vinoj%2ecardoza%40gmail%2ecom&currency_code=GBP&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: tag, tagcloud, cloud, 3D tagcloud
 Requires at least: 3.0
-Tested up to: 3.2
+Tested up to: 3.5
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -62,6 +62,9 @@ Uninstalling is as simple as deactivating the plugin.
 None yet, if you have one post it at http://fingerfish.com/cardoza-3d-tagcloud/
 
 == Changelog ==
+
+= Version 2.0 =
+* Background Color and Text Color bug fixed, so that the user assigned colors will be displayed.
 
 = Version 1.9 =
 * All the notices were debugged.
