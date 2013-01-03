@@ -1,26 +1,32 @@
 <?php
    /*
    Plugin Name: 3D tag cloud
-   Plugin URI: http://www.vinojcardoza.com/cardoza-3d-tagcloud/
+   Plugin URI: http://fingerfish.com/cardoza-3d-tagcloud/
    Description: 3D tag cloud displays your tags in 3D by placing them on a rotating text.
-   Version: 1.8
+   Version: 1.9
    Author: Vinoj Cardoza
-   Author URI: http://www.vinojcardoza.com/about-me/
+   Author URI: http://fingerfish.com/about-me/
    License: GPL2
    */
 
 //includes the jquery file
-wp_enqueue_script('tag_handle', plugin_dir_url(__FILE__). 'jquery.tagcanvas.min.js', array('jquery'));
-wp_enqueue_script('tagcloud_handle', plugin_dir_url(__FILE__). 'cardoza_3D_tag_cloud.js', array('jquery'));
-//includes the css styles file
-wp_enqueue_style('my-style', plugin_dir_url(__FILE__). '3dcloud_style.css');
 
-add_action("plugins_loaded", "cardoza_3d_tagcloud_init");
+add_action('admin_init', 'tagcloud_enq_scripts');
 add_action("admin_menu", "cardoza_3d_tag_cloud_options");
+add_action('wp_enqueue_scripts', 'tagcloud_enq_scripts');
+add_action("plugins_loaded", "cardoza_3d_tagcloud_init");
+
+function tagcloud_enq_scripts(){
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('tag_handle', plugins_url('/jquery.tagcanvas.min.js', __FILE__), array('jquery'));
+	wp_enqueue_script('tagcloud_handle', plugins_url('/cardoza_3D_tag_cloud.js', __FILE__), array('jquery'));
+	//includes the css styles file
+	wp_enqueue_style('my-style', plugin_dir_url(__FILE__). '3dcloud_style.css');
+}
 
 //The following function will retrieve all the avaialable 
 //options from the wordpress database
-function retrieve_options($opt_val){
+function retrieve_options(){
 	$opt_val = array(
 			'title' => stripslashes(get_option('c3tdc_title')),
 			'no_of_tags' => stripslashes(get_option('c3tdc_noof_tags')),
@@ -74,7 +80,7 @@ function cardoza_3D_tc_options_page(){
 <div id="message" class="updated fade"><p><strong><?php _e('Options saved.', 'cardozatagcloud' ); ?></strong></p></div>
 <?php	
 	}
-	$option_value = retrieve_options($opt_val);
+	$option_value = retrieve_options();
 ?>
 	<div class="wrap">
 		<h2><?php _e("3D Tag Cloud Options", "cardozatagcloud");?></h2><br />
@@ -122,7 +128,7 @@ function cardoza_3D_tc_options_page(){
 }
 
 function widget_cardoza_3d_tagcloud($args){
-	$option_value = retrieve_options($opt_val);
+	$option_value = retrieve_options();
 	extract($args);
 	echo $before_widget;
 	echo $before_title;
@@ -187,7 +193,7 @@ function widget_cardoza_3d_tagcloud($args){
 
 function cardoza_3d_tagcloud_init(){
 	load_plugin_textdomain('cardozatagcloud', false, dirname( plugin_basename(__FILE__)).'/languages');
-	register_sidebar_widget(__('3D Tag Cloud'), 'widget_cardoza_3d_tagcloud');
+	wp_register_sidebar_widget('3d_tag_cloud', __('3D Tag Cloud'), 'widget_cardoza_3d_tagcloud');
 }
 
 

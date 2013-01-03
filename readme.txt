@@ -3,7 +3,7 @@ Contributors: vinoj.cardoza
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=vinoj%2ecardoza%40gmail%2ecom&currency_code=GBP&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: tag, tagcloud, cloud, 3D tagcloud
 Requires at least: 3.0
-Tested up to: 3.5
+Tested up to: 3.2
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -32,7 +32,7 @@ If you have any suggestions or feedback, please post it in the following link.
 
 Translation is enabled for this plugin. If someone interested in translating this plugin please visit the following link and post in the comments section with your contact email. Thanks.
 
-For more visit: http://www.vinojcardoza.com/cardoza-3d-tagcloud/
+For more visit: http://fingerfish.com/cardoza-3d-tagcloud/
 
 = Translated languages =
 
@@ -62,6 +62,9 @@ Uninstalling is as simple as deactivating the plugin.
 None yet, if you have one post it at http://fingerfish.com/cardoza-3d-tagcloud/
 
 == Changelog ==
+
+= Version 1.9 =
+* All the notices were debugged.
 
 = Version 1.8 =
 * German translation improved (Translated by Simon Lang).
