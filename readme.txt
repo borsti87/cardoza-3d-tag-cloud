@@ -63,6 +63,9 @@ None yet, if you have one post it at http://fingerfish.com/cardoza-3d-tagcloud/
 
 == Changelog ==
 
+= Version 2.1 =
+* Slovak translation added (translated by Branco Radenovich)
+
 = Version 2.0 =
 * Background Color and Text Color bug fixed, so that the user assigned colors will be displayed.
 

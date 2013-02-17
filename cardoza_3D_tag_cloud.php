@@ -3,7 +3,7 @@
    Plugin Name: 3D tag cloud
    Plugin URI: http://fingerfish.com/cardoza-3d-tagcloud/
    Description: 3D tag cloud displays your tags in 3D by placing them on a rotating text.
-   Version: 2.0
+   Version: 2.1
    Author: Vinoj Cardoza
    Author URI: http://fingerfish.com/about-me/
    License: GPL2
