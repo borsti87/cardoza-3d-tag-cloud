@@ -3,7 +3,7 @@
    Plugin Name: 3D tag cloud
    Plugin URI: http://fingerfish.com/cardoza-3d-tagcloud/
    Description: 3D tag cloud displays your tags in 3D by placing them on a rotating text.
-   Version: 2.1
+   Version: 2.2
    Author: Vinoj Cardoza
    Author URI: http://fingerfish.com/about-me/
    License: GPL2
@@ -19,7 +19,6 @@ add_action("plugins_loaded", "cardoza_3d_tagcloud_init");
 function tagcloud_enq_scripts(){
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('tag_handle', plugins_url('/jquery.tagcanvas.min.js', __FILE__), array('jquery'));
-	wp_enqueue_script('tagcloud_handle', plugins_url('/cardoza_3D_tag_cloud.js', __FILE__), array('jquery'));
 	//includes the css styles file
 	wp_enqueue_style('my-style', plugin_dir_url(__FILE__). '3dcloud_style.css');
 }
@@ -48,22 +47,24 @@ function tagcloud_js_init(){
 	$option_value = retrieve_options(); 
 	if(!empty($option_value['txt_color'])) $canvas_txtcolor = $option_value['txt_color'];
 	else $canvas_txtcolor = "333333";
+	if(!empty($option_value['bg_color'])) $canvas_outlinecolor = $option_value['bg_color'];
+	else $canvas_outlinecolor = "FFFFFF";
 	?>
 	<script type="text/javascript">
 	$j = jQuery.noConflict();
-$j(document).ready(function() {
-    if(!$j('#myCanvas').tagcanvas({
-    	textColour: '#<?php echo $canvas_txtcolor;?>',
-        outlineColour: '#FFFFFF',
-        reverse: true,
-        depth: 0.8,
-        textFont: null,
-        weight: true,
-        maxSpeed: 0.05
-    },'tags')) {
-        $j('#myCanvasContainer').hide();
-    }
-});
+	$j(document).ready(function() {
+	    if(!$j('#myCanvas').tagcanvas({
+	    	textColour: '#<?php echo $canvas_txtcolor;?>',
+	        outlineColour: '#<?php echo $canvas_outlinecolor;?>',
+	        reverse: true,
+	        depth: 0.8,
+	        textFont: null,
+	        weight: true,
+	        maxSpeed: 0.05
+	    },'tags')) {
+	        $j('#myCanvasContainer').hide();
+	    }
+	}); 
 </script>
 	<?php
 }
@@ -222,6 +223,4 @@ function cardoza_3d_tagcloud_init(){
 	load_plugin_textdomain('cardozatagcloud', false, dirname( plugin_basename(__FILE__)).'/languages');
 	wp_register_sidebar_widget('3d_tag_cloud', __('3D Tag Cloud'), 'widget_cardoza_3d_tagcloud');
 }
-
-
 ?>

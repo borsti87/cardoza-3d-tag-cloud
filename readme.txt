@@ -63,6 +63,10 @@ None yet, if you have one post it at http://fingerfish.com/cardoza-3d-tagcloud/
 
 == Changelog ==
 
+= Version 2.2 =
+* Border color setup with the background color.
+* Custom javascript file removed.
+
 = Version 2.1 =
 * Slovak translation added (translated by Branco Radenovich)
 
