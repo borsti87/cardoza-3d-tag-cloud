@@ -39,6 +39,7 @@ For more visit: http://www.vinojcardoza.com/cardoza-3d-tagcloud/
 * French
 * German (Translated by Simon Lang)
 * Portuguese - Brazilian (Translated by Valdir Trombini).
+* Slovak (Translated by Branco Radenovich)
 * Spanish
 
 == Installation ==
@@ -59,7 +60,7 @@ Uninstalling is as simple as deactivating the plugin.
 
 == Frequently Asked Questions ==
 
-None yet, if you have one post it at http://fingerfish.com/cardoza-3d-tagcloud/
+None yet, if you have one post it at http://www.vinojcardoza.com/cardoza-3d-tagcloud/
 
 == Changelog ==
 
