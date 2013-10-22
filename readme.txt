@@ -64,6 +64,9 @@ None yet, if you have one post it at http://www.vinojcardoza.com/cardoza-3d-tagc
 
 == Changelog ==
 
+= Version 2.3 =
+* A minor modification updated to hide the ul list on page load.
+
 = Version 2.2 =
 * Border color setup with the background color.
 * Custom javascript file removed.
