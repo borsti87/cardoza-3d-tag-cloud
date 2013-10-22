@@ -32,7 +32,7 @@ If you have any suggestions or feedback, please post it in the following link.
 
 Translation is enabled for this plugin. If someone interested in translating this plugin please visit the following link and post in the comments section with your contact email. Thanks.
 
-For more visit: http://www.vinojcardoza.com/cardoza-3d-tagcloud/
+For more visit: http://www.vinojcardoza.com/blog/cardoza-3d-tagcloud/
 
 = Translated languages =
 
