@@ -29,7 +29,7 @@ New Configuration options been added to the admin panel. Now the site admin can 
 If you have any suggestions or feedback, please post it in the following link.
 
 = Support =
-Thanks for downloading and installing my plugin. You can show your appreciation and support future development by donating or clicking the ads on the blog page.
+Thanks for downloading and installing my plugin. You can show your appreciation and support future development by donating.
 
 Support Page: http://www.vinojcardoza.com/blog/cardoza-3d-tagcloud/
 
