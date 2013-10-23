@@ -1,7 +1,7 @@
 <?php
    /*
    Plugin Name: 3D tag cloud
-   Plugin URI: http://www.vinojcardoza.com/cardoza-3d-tagcloud/
+   Plugin URI: http://www.vinojcardoza.com/blog/cardoza-3d-tagcloud/
    Description: 3D tag cloud displays your tags in 3D by placing them on a rotating text.
    Version: 2.3
    Author: Vinoj Cardoza
