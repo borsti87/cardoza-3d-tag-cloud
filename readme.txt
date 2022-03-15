@@ -3,7 +3,7 @@ Contributors: vinoj.cardoza
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=vinoj%2ecardoza%40gmail%2ecom&currency_code=GBP&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: tag, tagcloud, cloud, 3D tagcloud, tags, worpress, wordpress tags, wordpress tag
 Requires at least: 3.0
-Tested up to: 4.1.1
+Tested up to: 5.7
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -11,7 +11,7 @@ Displays your post tags in 3D rotating animation.
 
 == Description ==
 
-3D Tag Cloud allows you to display your site's tags using jquery that rotates the tags in 3D. 
+3D Tag Cloud allows you to display your site's tags using jquery that rotates the tags in 3D.
 
 It works just like a regular tags cloud, but is more visually exciting. Clicking the tags will take you to the appropriate page.  Might not work with less than IE9.
 
@@ -31,7 +31,7 @@ If you have any suggestions or feedback, please post it in the following link.
 = Support =
 Thanks for downloading and installing my plugin. You can show your appreciation and support future development by donating.
 
-Support Page: http://www.vinojcardoza.com/blog/cardoza-3d-tagcloud/
+Support Page: https://www.cardozatechnologies.com/
 
 = Translation =
 
@@ -67,39 +67,30 @@ None yet, if you have one post it at http://www.vinojcardoza.com/cardoza-3d-tagc
 
 == Changelog ==
 
-= Version 2.4 =
-* Tested compatibility with Wordpress 4.1.1.
+= Version 3.4 =
+* Bug fix: Font size fix.
 
-= Version 2.3 =
-* A minor modification updated to hide the ul list on page load.
+= Version 3.3 =
+* Bug fix: Admin
 
-= Version 2.2 =
-* Border color setup with the background color.
-* Custom javascript file removed.
+= Version 3.2 =
+* Bug fix: Correct tag link included
+* New admin theme implemented
 
-= Version 2.1 =
-* Slovak translation added (translated by Branco Radenovich)
+= Version 3.1 =
+* Bug fix: Captcha slug removed
 
-= Version 2.0 =
-* Background Color and Text Color bug fixed, so that the user assigned colors will be displayed.
+= Version 3.0 =
+* Bug fix: Warning: call_user_func_array()
 
-= Version 1.9 =
-* All the notices were debugged.
+= Version 2.9 =
+* Tested compatibility with Wordpress 4.6.1
 
-= Version 1.8 =
-* German translation improved (Translated by Simon Lang).
+= Version 2.8 =
+* Tested compatibility with Wordpress 4.5.3
 
-= Version 1.7 =
-* Jquery conflict bug fixed (Fixed by Muzammil Hussain).
+= Version 2.7 =
+* Menu moved under settings.
 
-= Version 1.6 =
-* Font size enabled in the tag cloud.
-* German translation added.
-
-= Version 1.5 =
-* Tag style changed to sphere from flowing style.
-* Portuguese (Brazilian) translation added (Translated by Valdir Trombini).
-
-= Version 1.4 =
-* Translation enbaled.
-* Icon replaced.
+= Version 2.6 =
+* Tested compatibility with Wordpress 4.4.2
