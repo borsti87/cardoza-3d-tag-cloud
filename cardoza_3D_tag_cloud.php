@@ -3,8 +3,8 @@
 Plugin Name: 3D tag cloud
 Plugin URI: https://www.cardozatechnologies.com/our-works/3d-tag-cloud/
 Description: 3D tag cloud displays your tags in 3D by placing them on a rotating text.
-Version: 3.8
-Author: Vinoj Cardoza
+Version: 3.8.a
+Author: Vinoj Cardoza / SEG
 Author URI: https://www.cardozatechnologies.com/
 License: GPL2
 */
@@ -36,16 +36,23 @@ function tagcloud_enq_scripts(){
 //options from the wordpress database
 function retrieve_options(){
 	$opt_val = array(
-			'title' => stripslashes(get_option('c3tdc_title')),
-			'no_of_tags' => stripslashes(get_option('c3tdc_noof_tags')),
-			'width' => stripslashes(get_option('c3tdc_width')),
-			'height' => stripslashes(get_option('c3tdc_height')),
-			'bg_color' => stripslashes(get_option('c3dtc_bg_color')),
-			'txt_color' => stripslashes(get_option('c3dtc_txt_color')),
-			'hlt_txt_color' => stripslashes(get_option('c3dtc_hlt_txt_color')),
-			'font_name' => stripslashes(get_option('c3dtc_font_name')),
-			'max_font_size' => stripslashes(get_option('c3dtc_max_font_size')),
-			'min_font_size' => stripslashes(get_option('c3dtc_min_font_size'))
+		'title' => stripslashes(get_option('c3tdc_title')),
+	    'no_of_tags' => stripslashes(get_option('c3tdc_noof_tags')),
+	    'shuffle_tags' => stripslashes(get_option('c3tdc_shuffle_tags')),          // new option shuffle_tags added in V3.8.a
+	    'reverse' => stripslashes(get_option('c3tdc_reverse')),                    // new option revers added in V3.8.a
+	    'wheelzoom' => stripslashes(get_option('c3tdc_wheelzoom')),                // new option wheelzoom added in V3.8.a
+	    'zoom' => stripslashes(get_option('c3tdc_zoom')),                          // new option zoom added in V3.8.a
+		'width' => stripslashes(get_option('c3tdc_width')),
+		'height' => stripslashes(get_option('c3tdc_height')),
+		'bg_color' => stripslashes(get_option('c3dtc_bg_color')),
+	    'txt_color' => stripslashes(get_option('c3dtc_txt_color')),
+	    'outline_color' => stripslashes(get_option('c3dtc_outline_color')),        // new option outline_color added in V3.8.a
+	    'outline_method' => stripslashes(get_option('c3dtc_outline_method')),      // new option outline_method added in V3.8.a
+	    'outline_increase' => stripslashes(get_option('c3dtc_outline_increase')),  // new option outline_increase added in V3.8.a
+		'hlt_txt_color' => stripslashes(get_option('c3dtc_hlt_txt_color')),
+		'font_name' => stripslashes(get_option('c3dtc_font_name')),
+		'max_font_size' => stripslashes(get_option('c3dtc_max_font_size')),
+		'min_font_size' => stripslashes(get_option('c3dtc_min_font_size'))
 	); 
 	return $opt_val;
 }
@@ -53,23 +60,46 @@ function retrieve_options(){
 add_action('wp_head','tagcloud_js_init');
 
 function tagcloud_js_init(){
-	$option_value = retrieve_options(); 
 	if(!empty($option_value['txt_color'])) $canvas_txtcolor = $option_value['txt_color'];
 	else $canvas_txtcolor = "333333";
-	if(!empty($option_value['bg_color'])) $canvas_outlinecolor = $option_value['bg_color'];
+	// new option shuffle_tags added in V3.8.a
+	if(!empty($option_value['shuffle_tags'])) $canvas_shuffletags = $option_value['shuffle_tags'];
+	else $canvas_shuffletags = "false";
+	// new option revers added in V3.8.a
+	if(!empty($option_value['reverse'])) $canvas_reverse = $option_value['reverse'];
+	else $canvas_reverse = "false";
+	// new option wheelzoom added in V3.8.a
+	if(!empty($option_value['wheelzoom'])) $canvas_wheelzoom = $option_value['wheelzoom'];
+	else $canvas_wheelzoom = "false";
+	// new option zoom added in V3.8.a
+	if(!empty($option_value['zoom'])) $canvas_zoom = $option_value['zoom']/100;
+	else $canvas_zoom = 0.9;
+	// new option outline_color added in V3.8.a
+	if(!empty($option_value['outline_color'])) $canvas_outlinecolor = $option_value['outline_color'];
 	else $canvas_outlinecolor = "FFFFFF";
+	// new option outline_method added in V3.8.a
+	if(!empty($option_value['outline_method'])) $canvas_outlinemethod = $option_value['outline_method'];
+	else $canvas_outlinemethod = "colour";
+	// new option outline_increase added in V3.8.a
+	if(!empty($option_value['outline_increase'])) $canvas_outlineincrease = $option_value['outline_increase'];
+	else $canvas_outlineincrease = 4;
 	?>
 	<script type="text/javascript">
 		$j = jQuery.noConflict();
 		$j(document).ready(function() {
 			if(!$j('#myCanvas').tagcanvas({
 				textColour: '#<?php echo $canvas_txtcolor;?>',
-				outlineColour: '#<?php echo $canvas_outlinecolor;?>',
-				reverse: true,
-				depth: 0.8,
-				textFont: null,
-				weight: true,
-				maxSpeed: 0.05
+				outlineColour: '#<?php echo $canvas_outlinecolor;?>',											// new option outline_color added in V3.8.a
+				outlineMethod : '<?php echo $canvas_outlinemethod;?>',											// new option outline_method added in V3.8.a
+				<?php if($canvas_outlinemethod=='size') echo "outlineIncrease : $canvas_outlineincrease,";?>	// new option outline_increase added in V3.8.a
+				shuffleTags : <?php echo $canvas_shuffletags; ?>,												// new option shuffle_tags added in V3.8.a
+				reverse: <?php echo $canvas_reverse; ?>,														// new option reverse added in V3.8.a
+				wheelZoom : <?php echo $canvas_wheelzoom; ?>,													// new option wheelzoom added in V3.8.a
+				zoom : <?php echo $canvas_zoom; ?>,																// new option wheelzoom added in V3.8.a
+				maxSpeed: 0.03,
+				depth: 0.75,
+				//textFont: null,
+				weight: true
 			},'tags')) {
 				$j('#myCanvasContainer').hide();
 			}
@@ -128,7 +158,7 @@ function widget_cardoza_3d_tagcloud($args){
 		?>
 		<div id="myCanvasContainer" style="background-color:#<?php echo $canvas_bgcolor; ?>;">
 			<canvas width="<?php echo $canvas_width; ?>" height="<?php echo $canvas_height; ?>" id="myCanvas">
-				<p>Anything in here will be replaced on browsers that support the canvas element</p>
+				<p><?php _e('Anything in here will be replaced on browsers that support the canvas element', 'cardozatagcloud'); ?></p>
 			</canvas>
 		</div>
 		<div id="tags">
@@ -155,7 +185,7 @@ function widget_cardoza_3d_tagcloud($args){
 		</div>
 		<?php
 	}
-	else echo "No tags found";
+	else _e('No tags found', 'cardozatagcloud');
 	echo $after_widget;
 }
 

@@ -67,6 +67,16 @@ None yet, if you have one post it at http://www.vinojcardoza.com/cardoza-3d-tagc
 
 == Changelog ==
 
+= Version 3.8.a =
+* Add some options to modify in the Options Form
+* - shuffle tags (false or true)
+* - reverse (false or true)
+* - mouse wheel zoom (false or true)
+* - zoom (percent)
+* - outline color (hex color value)
+* - outline methode (outline, classic, block, color, size, none)
+* - outline increase (pixels)
+
 = Version 3.4 =
 * Bug fix: Font size fix.
 
