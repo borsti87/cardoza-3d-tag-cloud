@@ -2,77 +2,248 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cardozatagcloud\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-12 11:35-0000\n"
-"PO-Revision-Date: 2012-11-12 11:35-0000\n"
+"POT-Creation-Date: 2022-03-19 20:15+0100\n"
+"PO-Revision-Date: 2022-03-19 20:27+0100\n"
 "Last-Translator: Vinoj Cardoza <vinoj.cardoza@hotmail.com>\n"
 "Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-Language: German\n"
-"X-Poedit-Country: GERMANY\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../cardoza_3D_tag_cloud.php:41
-#: ../cardoza_3D_tag_cloud.php:190
+#: ../cardoza_3D_tag_cloud.php:113 ../cardoza_3D_tag_cloud.php:114
+#: ../cardoza_3D_tag_cloud.php:194
 msgid "3D Tag Cloud"
 msgstr "3D Tag Cloud"
 
-#: ../cardoza_3D_tag_cloud.php:74
-msgid "Options saved."
-msgstr "Einstellungen gespeichert"
+#: ../cardoza_3D_tag_cloud.php:161
+msgid ""
+"Anything in here will be replaced on browsers that support the canvas element"
+msgstr ""
+"Alles, was hier steht, wird auf Browsern, die das Canvas-Element "
+"unterstützen, ersetzt"
 
-#: ../cardoza_3D_tag_cloud.php:80
+#: ../cardoza_3D_tag_cloud.php:188
+msgid "No tags found"
+msgstr "Keine Tags gefunden"
+
+#: ../cardoza_3D_tag_cloud_options.php:32
 msgid "3D Tag Cloud Options"
 msgstr "3D Tag Cloud Einstellungen"
 
-#: ../cardoza_3D_tag_cloud.php:83
+#: ../cardoza_3D_tag_cloud_options.php:53
+msgid "Options saved."
+msgstr "Einstellungen gespeichert."
+
+#: ../cardoza_3D_tag_cloud_options.php:62
 msgid "General Settings"
 msgstr "Allgemeine Einstellungen"
 
-#: ../cardoza_3D_tag_cloud.php:85
+#: ../cardoza_3D_tag_cloud_options.php:67
 msgid "Widget Title"
 msgstr "Widget Titel"
 
-#: ../cardoza_3D_tag_cloud.php:87
+#: ../cardoza_3D_tag_cloud_options.php:73
 msgid "Number of tags"
 msgstr "Anzahl der Tags"
 
-#: ../cardoza_3D_tag_cloud.php:89
+#: ../cardoza_3D_tag_cloud_options.php:79
 msgid "Width"
 msgstr "Breite"
 
-#: ../cardoza_3D_tag_cloud.php:91
+#: ../cardoza_3D_tag_cloud_options.php:79
+#: ../cardoza_3D_tag_cloud_options.php:85
+#: ../cardoza_3D_tag_cloud_options.php:149
+#: ../cardoza_3D_tag_cloud_options.php:206
+#: ../cardoza_3D_tag_cloud_options.php:212
+#: ../cardoza_3D_tag_cloud_options.php:219
+msgid "Enter only number"
+msgstr "Nur numerische Zeichen eingeben"
+
+#: ../cardoza_3D_tag_cloud_options.php:85
 msgid "Height"
 msgstr "Höhe"
 
-#: ../cardoza_3D_tag_cloud.php:94
+#: ../cardoza_3D_tag_cloud_options.php:95
+msgid "Advanced Settings"
+msgstr "Erweiterte Einstellungen"
+
+#: ../cardoza_3D_tag_cloud_options.php:101
+msgid "Text Outline Method"
+msgstr "Text Umrissmethode"
+
+#: ../cardoza_3D_tag_cloud_options.php:102
+msgid "Type of highlight to use."
+msgstr "Art der zu verwendenden Hervorhebung."
+
+#: ../cardoza_3D_tag_cloud_options.php:104
+msgid "Outline"
+msgstr "Umriss"
+
+#: ../cardoza_3D_tag_cloud_options.php:104
+msgid "An outline at the same depth as the active tag."
+msgstr "Ein Umriss in der gleichen Tiefe wie das aktive Schlagwort."
+
+#: ../cardoza_3D_tag_cloud_options.php:105
+msgid "Classic"
+msgstr "Klassisch"
+
+#: ../cardoza_3D_tag_cloud_options.php:105
+msgid "Old-style outline on top of all tags."
+msgstr "Umriss im alten Stil oben auf allen Schlagwörtern."
+
+#: ../cardoza_3D_tag_cloud_options.php:106
+msgid "Block"
+msgstr "Block"
+
+#: ../cardoza_3D_tag_cloud_options.php:106
+msgid "Solid block of colour around the active tag."
+msgstr "Ein farbiger Block um das aktive Schlagwort."
+
+#: ../cardoza_3D_tag_cloud_options.php:107
+msgid "Colour"
+msgstr "Farbe"
+
+#: ../cardoza_3D_tag_cloud_options.php:107
+msgid ""
+"Changes the colour of the text or image of the current tag to the Outline "
+"Colour value."
+msgstr ""
+"Ändert die Farbe des Textes oder des Bildes des aktuellen Tags in den Wert "
+"für die Umrissfarbe."
+
+#: ../cardoza_3D_tag_cloud_options.php:108
+msgid "Size"
+msgstr "Größe"
+
+#: ../cardoza_3D_tag_cloud_options.php:108
+msgid ""
+"Increases the size of the tag, using the Outline Increase option for the "
+"amount."
+msgstr ""
+"Vergrößert die Größe des Schlagwortes, wobei die Option Umrissvergrößerung "
+"für den Betrag verwendet wird."
+
+#: ../cardoza_3D_tag_cloud_options.php:109
+msgid "None"
+msgstr "Keine"
+
+#: ../cardoza_3D_tag_cloud_options.php:109
+msgid "No highlighting at all."
+msgstr "Keine Hervorhebungen."
+
+#: ../cardoza_3D_tag_cloud_options.php:116
+msgid "Shuffle Tags"
+msgstr "Mischen der Schlagwörter"
+
+#: ../cardoza_3D_tag_cloud_options.php:117
+msgid "Set to \"true\" to randomize the order of the tags."
+msgstr ""
+"Auf \"Wahr\" setzen, um die Schlagwörter nach dem Zufallsprinzip zu "
+"sortieren."
+
+#: ../cardoza_3D_tag_cloud_options.php:119
+#: ../cardoza_3D_tag_cloud_options.php:130
+#: ../cardoza_3D_tag_cloud_options.php:141
+msgid "False"
+msgstr "Falsch"
+
+#: ../cardoza_3D_tag_cloud_options.php:120
+#: ../cardoza_3D_tag_cloud_options.php:131
+#: ../cardoza_3D_tag_cloud_options.php:142
+msgid "True"
+msgstr "Wahr"
+
+#: ../cardoza_3D_tag_cloud_options.php:127
+msgid "Reverse Direction"
+msgstr "Richtung umkehren"
+
+#: ../cardoza_3D_tag_cloud_options.php:128
+msgid ""
+"Set to \"true\" to reverse direction of movement relative to mouse position."
+msgstr ""
+"Auf \"Wahr\" setzen, um die Bewegungsrichtung relativ zur Mausposition "
+"umzukehren."
+
+#: ../cardoza_3D_tag_cloud_options.php:138
+msgid "Mouse Wheel Zoom"
+msgstr "Mausrad-Zoom"
+
+#: ../cardoza_3D_tag_cloud_options.php:139
+msgid ""
+"Set to \"true\" to enable zooming the cloud in and out using the mouse wheel "
+"or scroll gesture."
+msgstr ""
+"Setzen Sie diesen Wert auf \"Wahr\", um das Vergrößern und Verkleinern der "
+"Wolke mit dem Mausrad oder einer Scroll-Geste zu ermöglichen."
+
+#: ../cardoza_3D_tag_cloud_options.php:149
+msgid "Zoom"
+msgstr "Zoom"
+
+#: ../cardoza_3D_tag_cloud_options.php:150
+msgid ""
+"Adjusts the relative size of the tag cloud in the canvas. Larger values will "
+"zoom into the cloud, smaller values will zoom out."
+msgstr ""
+"Passt die relative Größe der Tag-Cloud im Canvas an. Größere Werte zoomen in "
+"die Wolke hinein, kleinere Werte zoomen heraus."
+
+#: ../cardoza_3D_tag_cloud_options.php:159
 msgid "Color Settings (Hex value)"
 msgstr "Farbeinstellungen ( Hex-Wert)"
 
-#: ../cardoza_3D_tag_cloud.php:96
+#: ../cardoza_3D_tag_cloud_options.php:164
 msgid "Background Color"
 msgstr "Hintergrundfarbe"
 
-#: ../cardoza_3D_tag_cloud.php:98
+#: ../cardoza_3D_tag_cloud_options.php:164
+#: ../cardoza_3D_tag_cloud_options.php:170
+#: ../cardoza_3D_tag_cloud_options.php:177
+msgid "Enter only alphanumeric"
+msgstr "Nur alphanumerische Zeichen eingeben"
+
+#: ../cardoza_3D_tag_cloud_options.php:170
 msgid "Text Color"
 msgstr "Textfarbe"
 
-#: ../cardoza_3D_tag_cloud.php:101
+#: ../cardoza_3D_tag_cloud_options.php:177
+msgid "Outline Color"
+msgstr "Umrissfarbe"
+
+#: ../cardoza_3D_tag_cloud_options.php:186
 msgid "Font Settings"
 msgstr "Schrifteinstellungen"
 
-#: ../cardoza_3D_tag_cloud.php:103
+#: ../cardoza_3D_tag_cloud_options.php:191
 msgid "Select the font"
 msgstr "Wählen Sie die Schriftart"
 
-#: ../cardoza_3D_tag_cloud.php:113
+#: ../cardoza_3D_tag_cloud_options.php:206
 msgid "Maximum font size"
 msgstr "Maximale Schriftgröße"
 
-#: ../cardoza_3D_tag_cloud.php:115
+#: ../cardoza_3D_tag_cloud_options.php:212
 msgid "Minimum font size"
 msgstr "Minimale Schriftgröße"
 
+#: ../cardoza_3D_tag_cloud_options.php:219
+msgid "Outline increase size"
+msgstr "Umrissvergrößerung"
+
+#: ../cardoza_3D_tag_cloud_options.php:220
+msgid ""
+"Number of pixels to increase size of tag by for the \"size\" outline method. "
+"Negative values are supported for decreasing the size."
+msgstr ""
+"Anzahl der Pixel, um die das Schlagwort bei der Umrissmethode \"Größe\" "
+"vergrößert werden soll. Negative Werte werden unterstützt, um die Größe zu "
+"verringern."
+
+#: ../cardoza_3D_tag_cloud_options.php:226
+msgid "Save"
+msgstr "Speichern"
